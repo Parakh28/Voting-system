@@ -20,58 +20,66 @@ int main ()
   scanf ("%d", &n);
   printf("=======================================\n");
   for (int j = 0; j < n; j++){
-       int age;
-        printf ("Enter Your Age : ");
-        scanf ("%d", &age);
-      
-        if (age >= 18){
-            
-            char d[1];
-    
-    
-    	    for (int i = 0; i < 1; i++){
-    	        
-    	        printf ("Enter who you want to vote\n a)Parakh\n b)Nabh\n");
-    	        scanf ("%s", d);
-    	        if (strcmp (d, "a") == 0)
-    		    {
-                    printf("Your vote goes to Parakh\n");
-                    printf("-----------------------\n");
+        char x[1];
+        printf("Do You Want To want (y/n) : ");
+        scanf("%s", x);
+        if (strcmp (x, "y") == 0){
+            int age;
+            printf ("Enter Your Age : ");
+            scanf ("%d", &age);
+          
+            if (age >= 18){
                 
-    		        a++;
-    		        c1.votes = a;
-    
-    
-    		    }
-    
-    	        else if (strcmp (d, "b") == 0)
-    		    {
-                    printf("Your vote goes to Nabh\n");
-                    printf("-----------------------\n");
-    		        c2.votes++;
-    		    }
-    	        else
-    		    {
-    		       printf ("Invalid Candidate\n");
-    		       printf("-----------------------\n");
-    		       i--;
-    		    }
-    
-    	      }
-    	        
-    	   
-        }
+                char d[1];
         
-        else if(age<18){
-          printf ("Your are under age to vote\n");
-    	  printf("=======================================\n");
-    	  j--;
+        
+        	    for (int i = 0; i < 1; i++){
+        	        
+        	       
+        	       
+        	        
+            	        printf ("Enter who you want to vote\n a)Parakh\n b)Nabh\n");
+            	        scanf ("%s", d);
+            	        if (strcmp (d, "a") == 0)
+            		    {
+                            printf("Your vote goes to Parakh\n");
+                            printf("-----------------------\n");
+                        
+            		        a++;
+            		        c1.votes = a;
             
+            
+            		    }
+            
+            	        else if (strcmp (d, "b") == 0)
+            		    {
+                            printf("Your vote goes to Nabh\n");
+                            printf("-----------------------\n");
+            		        c2.votes++;
+            		    }
+            	        else
+            		    {
+            		       printf ("Invalid Candidate\n");
+            		       printf("-----------------------\n");
+            		       i--;
+            		    }
+            
+            	      }
+            	        
+            	   
+                }
+                
+                else if(age<18){
+                  printf ("Your are under age to vote\n");
+            	  printf("=======================================\n");
+            	  j--;
+                    
+                }
         }
-        else{
-            break;
+            
+    else{
+        break;
         }
-     
     	    
     }
     
